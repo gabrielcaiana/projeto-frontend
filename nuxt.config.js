@@ -13,9 +13,9 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['@/assets/scss/base.scss', '@/assets/scss/font-face.scss'],
+  css: ['~/assets/scss/base.scss', '~/assets/scss/font-face.scss'],
 
-  plugins: [],
+  plugins: ['~/plugins/featherIcons'],
 
   components: [{ path: '@/components', pathPrefix: false }],
 
@@ -44,7 +44,7 @@ export default {
   },
 
   styleResources: {
-    scss: ['@/components/bosons/*.scss'],
+    scss: ['~/components/bosons/*.scss'],
   },
 
   build: {
