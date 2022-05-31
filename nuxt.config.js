@@ -13,7 +13,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: [],
+  css: ['@/assets/scss/base.scss'],
 
   plugins: [],
 
@@ -36,6 +36,10 @@ export default {
       short_name: 'Quero Educação',
       lang: 'pt-BR',
     },
+  },
+
+  styleResources: {
+    scss: [''],
   },
 
   build: {},

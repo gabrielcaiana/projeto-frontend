@@ -1,0 +1,34 @@
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  position: relative;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+#__nuxt,
+#__layout {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
