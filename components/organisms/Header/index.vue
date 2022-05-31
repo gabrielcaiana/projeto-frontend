@@ -1,13 +1,13 @@
 <template>
   <header>
-    <Container class="flex justify-between items-center py-2">
+    <Container class="flex justify-between items-center py-2 relative">
       <div class="flex gap-1">
-        <button
-          class="text-primary-dark flex items-center gap bg-white cursor-pointer text-base"
+        <div
+          class="text-primary-dark flex items-center gap cursor-pointer text-base text-medium"
         >
           <Icon name="info" color="#007a8d" />
-          Como funciona
-        </button>
+          <span>Como funciona</span>
+        </div>
         <Divider vertical />
         <Contact
           class="text-primary-dark"
@@ -21,7 +21,7 @@
           />
         </Contact>
       </div>
-      <Logo />
+      <Logo class="absolute m-auto right left" />
       <Avatar
         class="text-primary-dark"
         username="Gabriel Caiana"

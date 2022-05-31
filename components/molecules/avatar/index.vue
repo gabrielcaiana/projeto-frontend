@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap items-center cursor-pointer">
-    <span class="text-medium text-sm" v-text="username"></span>
+    <span class="text-medium text-base" v-text="username"></span>
     <Icon name="user" size="20" :color="iconColor" />
   </div>
 </template>
