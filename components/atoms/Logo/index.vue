@@ -1,5 +1,11 @@
 <template>
-  <img src="~/assets/images/logo.svg" :width="size" :alt="alt" :title="title" />
+  <img
+    class="cursor-pointer"
+    src="~/assets/images/logo.svg"
+    :width="size"
+    :alt="alt"
+    :title="title"
+  />
 </template>
 
 <script>
