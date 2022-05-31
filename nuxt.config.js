@@ -17,11 +17,16 @@ export default {
 
   plugins: [],
 
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false }],
 
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/dotenv'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
+  ],
 
   axios: {
     baseURL:
@@ -39,8 +44,10 @@ export default {
   },
 
   styleResources: {
-    scss: [''],
+    scss: ['@/components/bosons/*.scss'],
   },
 
-  build: {},
+  build: {
+    extractCSS: true,
+  },
 }
