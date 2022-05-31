@@ -13,9 +13,9 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  max-width: 1070px;
+  max-width: 1440px;
   @include screen('large', 'infinity') {
-    width: 70%;
+    width: 90%;
   }
 
   @include screen('medium') {
