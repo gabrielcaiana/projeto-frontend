@@ -1,0 +1,19 @@
+.bg-primary {
+  background-color: color('primary');
+}
+
+.bg-primary-dark {
+  background-color: color('primary', 'darkest');
+}
+
+.bg-secondary {
+  background-color: color('secondary', 'darkest');
+}
+
+.bg-secondary-dark {
+  background-color: color('secondary', 'darkest');
+}
+
+.bg-white {
+  background-color: #fff;
+}
