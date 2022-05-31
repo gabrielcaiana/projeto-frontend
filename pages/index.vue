@@ -1,5 +1,7 @@
 <template>
-  <section class="main">hello world</section>
+  <section class="main">
+    <Container>hello world</Container>
+  </section>
 </template>
 
 <script>
