@@ -13,7 +13,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['~/assets/scss/base.scss', '~/assets/scss/font-face.scss'],
+  css: [
+    '~/assets/scss/base.scss',
+    '~/assets/scss/font-face.scss',
+    '~/components/bosons/utilities/index.scss',
+  ],
 
   plugins: ['~/plugins/featherIcons'],
 
