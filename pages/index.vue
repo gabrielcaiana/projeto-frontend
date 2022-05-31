@@ -2,6 +2,8 @@
   <section class="main">
     <Container>
       <span>hello world</span>
+
+      <Logo />
     </Container>
   </section>
 </template>
