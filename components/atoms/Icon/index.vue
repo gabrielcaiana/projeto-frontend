@@ -1,5 +1,5 @@
 <template>
-  <div v-on="$listeners">
+  <div class="flex items-center justify-center" v-on="$listeners">
     <i :height="size" :width="size" :data-feather="name" :stroke="color"></i>
   </div>
 </template>
