@@ -1,0 +1,19 @@
+.text-dark {
+  color: color('dark');
+}
+
+.text-primary {
+  color: color('primary');
+}
+
+.text-primary-dark {
+  color: color('primary', 'darkest');
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}

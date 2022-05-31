@@ -16,17 +16,14 @@ export default {
   max-width: 1070px;
   @include screen('large', 'infinity') {
     width: 70%;
-    background: red;
   }
 
   @include screen('medium') {
     width: 85%;
-    background: blue;
   }
 
   @include screen('small') {
     width: 90%;
-    background: green;
   }
 }
 </style>
