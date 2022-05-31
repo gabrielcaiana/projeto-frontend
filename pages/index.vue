@@ -4,6 +4,7 @@
       <span>hello world</span>
 
       <Logo />
+      <Icon name="x" />
     </Container>
   </section>
 </template>
