@@ -1,6 +1,12 @@
 <template>
   <section class="py-1">
-    <Breadcrumb />
+    <header>
+      <Breadcrumb class="mb-1" />
+      <Title :class="isMobile && 'mb-1'" text="Bolsas favoritas" />
+      <Subtitle
+        text="Adicione bolsas de cursos e faculdades do seu interesse e receba atualizações com as melhores ofertas disponíveis."
+      />
+    </header>
   </section>
 </template>
 

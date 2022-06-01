@@ -1,8 +1,14 @@
 <template>
   <ul class="breadcrumb">
-    <li class="breadcrumb__item"><a href="#">Home</a></li>
-    <li class="breadcrumb__item"><a href="#">Minha conta</a></li>
-    <li class="breadcrumb__item">Bolsas favoritas</li>
+    <div v-if="isMobile" class="flex gap">
+      <Icon name="chevron-left" color="#007a8d" />
+      <li class="breadcrumb__item text-medium"><a href="#">Home</a></li>
+    </div>
+    <div v-else>
+      <li class="breadcrumb__item text-medium"><a href="#">Home</a></li>
+      <li class="breadcrumb__item text-medium"><a href="#">Minha conta</a></li>
+      <li class="breadcrumb__item">Bolsas favoritas</li>
+    </div>
   </ul>
 </template>
 
@@ -14,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .breadcrumb {
-  padding: 10px 16px;
+  padding: 10px 0;
   list-style: none;
   &__item {
     display: inline;
@@ -27,11 +33,11 @@ export default {
     }
 
     a {
-      color: color('primary');
+      color: color('primary', 'darkest');
       text-decoration: none;
 
       &:hover {
-        color: color('primary', 'darkset');
+        color: color('primary');
         text-decoration: underline;
       }
     }
