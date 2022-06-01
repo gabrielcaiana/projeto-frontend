@@ -1,5 +1,7 @@
 <template>
-  <section>Home</section>
+  <section class="py-1">
+    <Breadcrumb />
+  </section>
 </template>
 
 <script>
