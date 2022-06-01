@@ -1,5 +1,5 @@
 <template>
-  <section class="py-1">
+  <div class="py-1">
     <header>
       <Breadcrumb class="mb-1" />
       <Title :class="isMobile && 'mb-1'" text="Bolsas favoritas" />
@@ -7,7 +7,13 @@
         text="Adicione bolsas de cursos e faculdades do seu interesse e receba atualizações com as melhores ofertas disponíveis."
       />
     </header>
-  </section>
+
+    <section class="mt-3">
+      <div class="w-full flex flex-end">
+        <Tabs active="id2" />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
