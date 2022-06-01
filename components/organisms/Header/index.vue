@@ -2,14 +2,10 @@
   <header>
     <Container class="flex justify-between items-center py-2 relative">
       <div class="flex gap-1">
-        <div
-          class="text-primary-dark flex items-center gap cursor-pointer text-base text-medium"
-        >
-          <Icon name="info" color="#007a8d" />
-          <span>Como funciona</span>
-        </div>
+        <Info />
         <Divider vertical />
         <Contact
+          v-if="!isMobile && !isTablet"
           class="text-primary-dark"
           title="0800 123 2222"
           subtitle="Envie mensagem ou ligue"
@@ -21,7 +17,7 @@
           />
         </Contact>
       </div>
-      <Logo class="absolute m-auto right left" />
+      <Logo :class="[!isMobile && !isTablet && 'absolute m-auto right left']" />
       <Avatar
         class="text-primary-dark"
         username="Gabriel Caiana"
