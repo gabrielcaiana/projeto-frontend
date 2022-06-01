@@ -8,10 +8,8 @@
       />
     </header>
 
-    <section class="mt-3">
-      <div class="w-full flex flex-end">
-        <Tabs active="id2" />
-      </div>
+    <section class="my-3">
+      <ListCourses />
     </section>
   </div>
 </template>
