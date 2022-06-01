@@ -17,5 +17,13 @@
 <script>
 export default {
   name: 'IndexPage',
+
+  async asyncData({ $dataApi }) {
+    const data = await $dataApi.get()
+
+    console.log(data)
+
+    return { data }
+  },
 }
 </script>

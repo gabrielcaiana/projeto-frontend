@@ -19,7 +19,11 @@ export default {
     '~/components/bosons/utilities/index.scss',
   ],
 
-  plugins: ['~/plugins/featherIcons', '~/plugins/screenListener'],
+  plugins: [
+    '~/plugins/featherIcons',
+    '~/plugins/screenListener',
+    '~/plugins/dataApi',
+  ],
 
   components: [{ path: '@/components', pathPrefix: false }],
 
