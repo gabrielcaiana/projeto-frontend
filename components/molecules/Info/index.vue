@@ -1,6 +1,9 @@
 <template>
   <div
-    class="text-primary-dark flex items-center gap cursor-pointer text-base text-medium"
+    :class="[
+      'text-primary-dark flex items-center gap cursor-pointer text-base text-medium',
+      isMobile && 'flex flex-col',
+    ]"
   >
     <Icon name="info" color="#007a8d" />
     <span v-if="isMobile">Ajuda</span>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <Menu />
     <main>
       <Container>
         <Nuxt />
