@@ -1,130 +1,74 @@
 <template>
-  <div class="w-full">
-    <span class="text-base text-medium text-dark" v-text="label"></span>
-    <div class="custom-select" :tabindex="tabindex" @blur="open = false">
-      <div class="selected" :class="{ open: open }" @click="open = !open">
-        {{ selected }}
-      </div>
-      <div class="items" :class="{ selectHide: !open }">
-        <div
-          v-for="(option, i) of options"
-          :key="i"
-          @click="
-            selected = option
-            open = false
-            $emit('input', option)
-          "
-        >
-          {{ option }}
-        </div>
-      </div>
-    </div>
+  <div class="custom-select">
+    <label v-if="label && !value" class="custom-select__label">{{
+      label
+    }}</label>
+    <select :value="value" v-bind="$attrs" @change="updateValue">
+      <option
+        v-for="option in options"
+        :key="option"
+        :selected="option == value"
+        :value="option"
+      >
+        <span class="custom-select__option">{{ option }}</span>
+      </option>
+    </select>
   </div>
 </template>
 
 <script>
 export default {
   name: 'AppInputSelect',
+  inheritAttrs: false,
   props: {
     options: {
       type: Array,
       required: true,
     },
-    default: {
-      type: String,
-      required: false,
-      default: null,
-    },
     label: {
       type: String,
+      default: '',
+    },
+
+    value: {
+      type: [String, Array],
       required: true,
     },
-    tabindex: {
-      type: Number,
-      required: false,
-      default: 0,
+  },
+  methods: {
+    updateValue(event) {
+      this.$emit('input', event.target.value)
     },
-  },
-  data() {
-    return {
-      selected: this.default
-        ? this.default
-        : this.options?.length > 0
-        ? this.options[0]
-        : null,
-      open: false,
-    }
-  },
-  mounted() {
-    this.$emit('input', this.selected)
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .custom-select {
-  position: relative;
   width: 100%;
   text-align: left;
-  outline: none;
   height: 47px;
-  line-height: 47px;
   border: 1px solid color('dark');
   border-radius: 4px;
-  margin-top: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
 
-  .selected {
-    border-radius: 6px;
-    color: color('dark');
-    padding-left: 1em;
-    cursor: pointer;
-    user-select: none;
-
-    &:after {
-      position: absolute;
-      content: '';
-      top: 22px;
-      right: 1em;
-      width: 0;
-      height: 0;
-      border: 5px solid transparent;
-      border-color: color('dark') transparent transparent transparent;
-    }
-
-    .open {
-      border: 1px solid color('dark');
-      border-radius: 6px 6px 0px 0px;
-    }
+  &__label {
+    padding: 1rem;
   }
 
-  .items {
-    color: #fff;
-    border-radius: 0px 0px 6px 6px;
-    overflow: hidden;
-    border-right: 1px solid color('dark');
-    border-left: 1px solid color('dark');
-    border-bottom: 1px solid color('dark');
+  select {
+    width: 95%;
+    font-size: 1rem;
     position: absolute;
-    background-color: color('neutral');
-    left: 0;
-    right: 0;
-    z-index: 1;
+    top: 1rem;
+    left: 1rem;
+    background: transparent;
 
-    div {
-      color: color('dark');
-      border-bottom: 1px solid color('dark');
-      padding-left: 1em;
-      cursor: pointer;
-      user-select: none;
-
-      &:hover {
-        background-color: color('neutral');
-      }
+    @include screen('large', 'infinity') {
+      width: 90%;
     }
-  }
-
-  .selectHide {
-    display: none;
   }
 }
 </style>

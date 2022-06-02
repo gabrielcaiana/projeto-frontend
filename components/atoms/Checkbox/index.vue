@@ -1,7 +1,13 @@
 <template>
   <div>
     <label class="flex items-center gap text-base text-dark">
-      <input type="checkbox" name="checkbox" @change="onChange($event)" />
+      <input
+        v-bind="$attrs"
+        :checked="checked"
+        type="checkbox"
+        name="checkbox"
+        @input="updateValue($event)"
+      />
       {{ label }}
     </label>
   </div>
@@ -10,16 +16,27 @@
 <script>
 export default {
   name: 'AppCheckbox',
+  inheritAttrs: false,
   props: {
+    checked: {
+      type: [Boolean],
+      default: false,
+    },
+
     label: {
       type: String,
-      required: true,
+      default: '',
     },
   },
 
+  mounted() {
+    console.log('montou')
+    console.log(this.checked)
+  },
+
   methods: {
-    onChange(event) {
-      this.$emit('input', event.target.value)
+    updateValue(event) {
+      this.$emit('input', event.target.checked)
     },
   },
 }

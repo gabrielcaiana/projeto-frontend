@@ -1,6 +1,6 @@
 <template>
   <div
-    v-show="isVisible"
+    v-if="isVisible"
     class="modal"
     role="dialog"
     aria-modal="true"
