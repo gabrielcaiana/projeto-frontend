@@ -108,7 +108,7 @@ export default {
 
   &__container {
     position: fixed;
-    max-width: 632px;
+    max-width: 700px;
     width: 100%;
     max-height: 95%;
     left: 0;
@@ -130,7 +130,7 @@ export default {
 
   &__header {
     padding: 1rem 2rem 0 2rem;
-    background-color: color('neutral');
+    background-color: #fff;
   }
 
   &__heading {
@@ -163,7 +163,7 @@ export default {
     padding: 0 2rem 2rem;
     max-height: 78vh;
     overflow: auto;
-    background-color: color('neutral');
+    background-color: #fff;
   }
 }
 

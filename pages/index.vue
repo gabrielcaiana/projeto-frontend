@@ -18,12 +18,12 @@
 export default {
   name: 'IndexPage',
 
-  async asyncData({ $dataApi }) {
-    const data = await $dataApi.get()
+  // async asyncData({ $dataApi }) {
+  //   const data = await $dataApi.get()
 
-    console.log(data)
+  //   console.log(data)
 
-    return { data }
-  },
+  //   return { data }
+  // },
 }
 </script>

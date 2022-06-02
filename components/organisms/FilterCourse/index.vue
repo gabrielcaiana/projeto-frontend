@@ -44,6 +44,64 @@
         </div>
       </div>
     </div>
+
+    <div class="flex justify-between w-full text-medium">
+      <span>Resultado:</span>
+      <div class="flex gap">
+        <span>Ordernar por:</span>
+        <div class="flex" @click="orderCourses = !orderCourses">
+          <b class="text-medium text-primary cursor-pointer"
+            >Nome da faculdade</b
+          >
+          <Icon
+            :style="
+              orderCourses && 'transform: rotate(180deg); transition: 0.5s'
+            "
+            class="cursor-pointer"
+            name="chevron-down"
+            color="#18acc4"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      <ul class="list__table">
+        <li
+          v-for="(item, index) in items"
+          :key="index"
+          class="list__table__item"
+        >
+          <Checkbox class="flex items-center" />
+          <div class="flex flex-col justify-center">
+            <img :src="item.university.logo_url" :alt="item.course.name" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p
+              class="text-medium text-primary-dark"
+              v-text="item.course.name"
+            ></p>
+            <span v-text="item.course.level"></span>
+          </div>
+
+          <div class="flex flex-col items-end justify-center">
+            <p>
+              Bolsa de
+              <span
+                class="text-positive text-medium"
+                v-text="`${item.discount_percentage}%`"
+              ></span>
+            </p>
+            <span
+              class="text-positive text-medium"
+              v-text="`R$${item.price_with_discount.toFixed(0)}/mês`"
+            ></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <pre>{{ items }}</pre> -->
   </Modal>
 </template>
 
@@ -57,6 +115,7 @@ export default {
       defaul: false,
     },
   },
+
   data() {
     return {
       citys: ['São Paulo', 'São José dos campos', 'Rio de janeiro'],
@@ -66,7 +125,36 @@ export default {
       presencial: false,
       distancia: false,
       range: 0,
+      orderCourses: false,
+      items: null,
     }
+  },
+
+  async mounted() {
+    const data = await this.$dataApi.get()
+    this.items = data
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.list {
+  &__table {
+    margin-top: 2rem;
+    &__item {
+      display: grid;
+      grid-template-columns: 42px repeat(3, 1fr);
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-top: 2px solid #efefef;
+      border-bottom: 2px solid #efefef;
+
+      img {
+        height: 36px;
+        width: 120px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+</style>
