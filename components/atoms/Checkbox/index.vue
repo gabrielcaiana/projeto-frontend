@@ -34,7 +34,7 @@ input[type='checkbox'] {
   color: color('primary');
   width: 1.15em;
   height: 1.15em;
-  border: 0.15em solid color('primary');
+  border: 0.15em solid color('dark');
   border-radius: 0.15em;
   transform: translateY(-0.075em);
   display: grid;
@@ -43,6 +43,7 @@ input[type='checkbox'] {
 
   &:checked {
     background: color('primary');
+    border: 0.15em solid color('primary');
 
     &::before {
       transform: scale(1);
