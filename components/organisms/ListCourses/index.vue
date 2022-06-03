@@ -48,7 +48,7 @@
           </p>
 
           <div class="flex justify-center gap w-full mt-1">
-            <Button outlined label="Excluir" />
+            <Button outlined label="Excluir" @click="deleteCourse(course.id)" />
             <Button label="Ver Oferta" />
           </div>
         </div>
@@ -68,9 +68,29 @@ export default {
     }
   },
 
+  watch: {
+    showFilterCourse: {
+      handler(current, old) {
+        if (current !== old) {
+          const itens = JSON.parse(localStorage.getItem('quero-edu-courses'))
+          this.courses = itens
+        }
+      },
+      deep: true,
+    },
+  },
+
   mounted() {
     const itens = JSON.parse(localStorage.getItem('quero-edu-courses'))
     this.courses = itens
+  },
+
+  methods: {
+    deleteCourse(id) {
+      const index = this.courses.findIndex((item) => item.id === id)
+      this.courses.splice(index, 1)
+      localStorage.setItem('quero-edu-courses', JSON.stringify(this.courses))
+    },
   },
 }
 </script>

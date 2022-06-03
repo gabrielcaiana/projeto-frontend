@@ -237,6 +237,7 @@ export default {
         kind: {
           presencial: false,
           ead: false,
+          type: [],
         },
         price: 0,
       }

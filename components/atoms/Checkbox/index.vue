@@ -29,11 +29,6 @@ export default {
     },
   },
 
-  mounted() {
-    console.log('montou')
-    console.log(this.checked)
-  },
-
   methods: {
     updateValue(event) {
       this.$emit('input', event.target.checked)
