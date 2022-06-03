@@ -1,68 +1,44 @@
-# projeto-quero-educacao
+<p align="center">
+  <img width="240" src="https://user-images.githubusercontent.com/26663338/171777418-c44a3f3e-f48b-48d5-a76d-27ea9923a4d3.png"/>
+</p>
 
-## Build Setup
+<h1 align="center">Quero Bolsa projeto frontend 🚧 </h1>
 
-```bash
-# install dependencies
-$ yarn install
+> technologies used
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+- 💚 [Nuxtjs](https://nuxtjs.org/)  - The Intuitive Vue Framework
+- 🧩 [Commitlint](https://commitlint.js.org/#/)  -  helps your team adhering to a commit convention.
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Usage
 
-# generate static project
-$ yarn generate
+- `yarn dev` - This start application.
+- `yarn generate` - This build production.
+ - `yarn start` - This preview production.
+- `yarn lintfi` - Run lint in code.
+
+Install dependencies:
+
+```sh
+yarn install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Commit types
 
-## Special Directories
+| Commit Type | Title                    | Description                                                                                                 | Emoji |
+| ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- | :---: |
+| `feat`      | Features                 | A new feature                                                                                               |  ✨   |
+| `fix`       | Bug Fixes                | A bug Fix                                                                                                   |  🐛   |
+| `docs`      | Documentation            | Documentation only changes                                                                                  |  📚   |
+| `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  💎   |
+| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  📦   |
+| `perf`      | Performance Improvements | A code change that improves performance                                                                     |  🚀   |
+| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           |  🚨   |
+| `build`     | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |   🛠   |
+| `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |  ⚙️   |
+| `chore`     | Chores                   | Other changes that don't modify src or test files                                                           |  ♻️   |
+| `revert`    | Reverts                  | Reverts a previous commit                                                                                   |   🗑   |
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## License
 
-### `assets`
+All code are **copyright gabrielcaiana** and may not be used or reproduced without explicit permission.
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
