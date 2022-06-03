@@ -226,7 +226,10 @@ export default {
 
   methods: {
     saveCourse() {
-      console.log(this.coursesSelected)
+      localStorage.setItem(
+        'quero-edu-courses',
+        JSON.stringify(this.coursesSelected)
+      )
 
       this.filters = {
         course: '',

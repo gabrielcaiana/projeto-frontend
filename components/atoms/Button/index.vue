@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-radius: 4px;
   font-size: 1rem;
   text-align: center;
